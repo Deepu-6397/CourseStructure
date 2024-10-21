@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Course Structure</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>University Courses</h1>
+
+    <div class="course-container">
+        <% courses.forEach(course => { %>
+            <div class="course-card">
+                <h2><%= course.name %></h2>
+                <p><strong>Code:</strong> <%= course.code %></p>
+                <p><%= course.description %></p>
+                <a href="/course/<%= course.code %>" class="details-btn">View Details</a>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>
